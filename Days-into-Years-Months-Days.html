@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+     <title>M2Y</title>
+     
+     <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Lato" />     
+</head>
+<body style="font-family: Lato;">
+    <h2>Days into Years, Months & Days</h2>  
+    <p>
+        Convert Days into Years, Months & Days. </br>
+        Input number of Days you want to convert.
+    </p> 
+    <p>
+        Day : <input type="text" id="inputDay" style="width: 150px;"/>
+        <button onclick="convertDays()">Convert !</button>
+        </br>
+        Year  : <span id="years">0</span> &nbsp 
+        Month : <span id="months">0</span>  &nbsp 
+        Days  : <span id="days">0</span>
+    </p>  
+</body>
+
+<!-- Months into Years JS  -->
+<script type="text/javascript">
+     function convertDays() {
+        var years = 0; var months = 0; var days = 0;  
+        
+        // Get Days From Input
+        days = document.getElementById("inputDay").value;
+                
+        // Set Default Days To 0
+        if(days == ''){
+          days = 0;
+        }             
+        
+        // Convert
+    	years  = parseInt(days / 365)  
+        days   = parseInt(days % 365)  
+        months = parseInt(days / 30)   
+        days   = parseInt(days % 30)   
+           
+        document.getElementById("years").innerHTML = years;
+        document.getElementById("months").innerHTML = months;
+        document.getElementById("days").innerHTML = days;
+    }
+ </script>
+
+</html>
