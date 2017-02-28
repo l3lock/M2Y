@@ -34,10 +34,14 @@
           days = 0;
         }             
         
-        // Convert
-    	years  = parseInt(days / 365)  
-        days   = parseInt(days % 365)  
-        months = parseInt(days / 30)   
+        // How many years
+        years  = parseInt(days / 365)  
+
+        // How many months          
+        days   = parseInt(days % 365)            
+        months = parseInt(days / 30)  
+
+        // How many days
         days   = parseInt(days % 30)   
            
         document.getElementById("years").innerHTML = years;
